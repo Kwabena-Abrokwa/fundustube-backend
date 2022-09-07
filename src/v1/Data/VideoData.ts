@@ -11,6 +11,7 @@ export const VideoDatas = [
 		views: [1, 2, 3, 4, 5, 8, 10],
 		likes: [1, 2, 3, 4, 5, 8, 10],
 		dislikes: [1, 2, 3, 4, 5, 8, 10],
+		subscription: [1, 2, 3, 4, 5, 8, 10],
 		comments: [
 			{
 				user_id: 1,
@@ -42,6 +43,7 @@ export const VideoDatas = [
 		views: [1, 2, 3, 4, 5, 8, 10, 200],
 		likes: [1, 2, 3, 4, 5, 8, 10],
 		dislikes: [1, 2, 3, 4, 5, 8, 10],
+		subscription: [1, 2, 3, 4, 5, 8, 10],
 		comments: [
 			{
 				user_id: 1,
