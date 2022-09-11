@@ -31,7 +31,6 @@ export const createUserAccount = async (req: Request, res: Response) => {
 				.status(501)
 				.json({ status: false, message: "Email already exist" });
 
-
 		const user_id = Math.floor(1000 + Math.random() * 9000);
 		const salt = bcrypt.genSaltSync(10);
 		const hash = bcrypt.hashSync(password, salt);
@@ -49,7 +48,16 @@ export const createUserAccount = async (req: Request, res: Response) => {
 		if (createdUser) {
 			return res
 				.status(201)
-				.json({ status: true, message: "User created successfully" });
+				.json({
+					status: true,
+					message: "User created successfully",
+					data: {
+						user_id: user_id,
+						username: username,
+						email: email.toLowerCase(),
+						profile: "",
+					},
+				});
 		}
 	} catch (error) {
 		console.log(error);

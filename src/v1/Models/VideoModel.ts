@@ -14,7 +14,15 @@ const VideoScheme: mongoose.Schema = new mongoose.Schema(
 			type: String,
 			require: true,
 		},
+		donated_users: {
+			type: Array,
+			require: true,
+		},
 		donation_target: {
+			type: Number,
+			require: true,
+		},
+		donation_reached: {
 			type: Number,
 			require: true,
 		},
@@ -32,10 +40,6 @@ const VideoScheme: mongoose.Schema = new mongoose.Schema(
 		},
 		content: {
 			type: String,
-			require: true,
-		},
-		donated_users: {
-			type: Array,
 			require: true,
 		},
 		views: {
