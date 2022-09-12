@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import UsersModel from "../Models/UsersModel";
 import bcrypt from "bcrypt";
-import JWT from "jsonwebtoken";
 import { createUserValidation } from "../Validations/UserValodations";
 
 export const createUserAccount = async (req: Request, res: Response) => {
